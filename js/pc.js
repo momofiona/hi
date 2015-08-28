@@ -1,6 +1,6 @@
 define([], function(){
 
-	var Tips = (function(){
+/*	var Tips = (function(){
 
 		var $tipBox = $(".tips-box");
 
@@ -15,7 +15,7 @@ define([], function(){
 				
 			}
 		}
-	})();
+	})();*/
 
 	var resetTags = function(){
 		var tags = $(".tagcloud a");
@@ -27,7 +27,7 @@ define([], function(){
 		}
 	}
 
-	var slide = function(idx){
+/*	var slide = function(idx){
 		var $wrap = $(".switch-wrap");
 		$wrap.css({
 			"transform": "translate(-"+idx*100+"%, 0 )"
@@ -35,7 +35,7 @@ define([], function(){
 		$(".icon-wrap").addClass("hide");
 		$(".icon-wrap").eq(idx).removeClass("hide");
 	}
-
+*/
 	var bind = function(){
 		var switchBtn = $("#myonoffswitch");
 		var tagcloud = $(".second-part");
@@ -53,7 +53,7 @@ define([], function(){
 			}
 		});
 
-		var timeout;
+/*		var timeout;
 		var isEnterBtn = false;
 		var isEnterTips = false;
 
@@ -67,9 +67,9 @@ define([], function(){
 					Tips.hide();
 				}
 			}, 100);
-		});
+		});*/
 
-		$(".tips-box").bind("mouseenter", function(){
+/*		$(".tips-box").bind("mouseenter", function(){
 			isEnterTips = true;
 			Tips.show();
 		}).bind("mouseleave", function(){
@@ -81,11 +81,10 @@ define([], function(){
 			}, 100);
 		});
 
-		$(".tips-inner li").bind("click", function(){
-			var idx = $(this).index();
+		$(".icon-wrap").bind("click", function(){
+			var idx = $(this).data('idx');
 			slide(idx);
-			Tips.hide();
-		});
+		});*/
 	}
 
 	
@@ -94,7 +93,7 @@ define([], function(){
 		init: function(){
 			resetTags();
 			bind();
-			Tips.init();
+			// Tips.init();
 		}
 	}
 });
