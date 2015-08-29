@@ -1069,6 +1069,7 @@ a {
 }
 .article-entry pre code {
   font-size: 14px;
+  border: none;
 }
 .article-entry table {
   width: 100%;

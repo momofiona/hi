@@ -153,6 +153,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-javaBridge" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/hi/2015/08/30/javaBridge/" class="article-date">
+  	<time datetime="2015-08-29T16:21:29.194Z" itemprop="datePublished">2015-08-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: 岁月搓一坨<br>date: 2015-08-29 22:03:06</p>
+<h2 id="tags:">tags: </h2><p>昨晚下班回家，老婆告诉我说明天周末要带女儿去动物园。我吞了口饭：“啥~ 今天不是周二么”。  </p>
+<p>想想这些年日子过的满满当当，心里却还是空荡荡，今晚我想给个吐槽，为嘛自己上班总是浸在公司那些马马虎虎的项目里，像一颗坚硬的铆钉，做着自己份内的事情。  做好又怎样，做到最好又怎么样？脑子好使的都知道，写代码是整个项目中最容易的部分，是产品周期中最可控的环节。做到最好也只是写好了代码而已，而已，而已，离做好产品差得远呢。</p>
+<p>吐完工作开始吐搭档。话说新搭档入职快满一年了，和刚走上社会的我非常相似，年轻，没有爱好，没有女朋友，没有运动，容易沉静在写代码的氛围中，解决了问题就会很有成就感，可以一天不喝水，吃饭不积极，下班不积极…… 作为过来人哥欣赏你，公司需要你，但你可能几年后才能发现，兢兢业业奉献了自己，自己因为没有把时间花在提升眼界上而进步缓慢。兄弟啊，哥哥提醒你很多次不要太注重细节，但貌似没起作用。哎，我的个人经验也不一定是适合你，就不唠叨你了。我这人不喜欢主动帮人，但是如果主动来找我，我很愿意讨论分享。</p>
+<p>吐完搭档吐合作商。@#$%……哎呀妈呀真想吐了，恶心~下次和他有关的项目一个不接。</p>
+<p>最后找个镜子吐槽下，帅哥变大叔，电视上演的那些幸福人生怎么就那么难呢？想云淡风轻你去道观啊，没钱就给我好好努力；那些贵人你点个头哈个腰去喝啊，机会总是藏在风浪中得去风浪中找啊……。<br>想起朋友的签名“耐得住寂寞才能守得住繁华”，继续加油。</p>
+<p>昨晚下班突然决定回到家十几个红灯一灯不闯，一路上很多事情就想通了。一花一世界，有那么点感觉了。</p>
+<p>瞎扯了这么久回到写本文的本意上来，其实我就是给客户改了个bug，写写博客记录下自己的功德。</p>
+<p>客户网站上几处功能突然不能使用，检查后发现是网站从linux迁移到windows产生的问题</p>
+<ul>
+<li>php document_root在IIS上为空问题</li>
+</ul>
+<pre><code class="php"><span class="keyword">if</span>(<span class="keyword">empty</span>(<span class="variable">$_SERVER</span>[<span class="string">'DOCUMENT_ROOT'</span>]) &amp;&amp; !<span class="keyword">empty</span>(<span class="variable">$_SERVER</span>[<span class="string">'SCRIPT_FILENAME'</span>])) { 
+  <span class="variable">$_SERVER</span>[<span class="string">'DOCUMENT_ROOT'</span>] = str_replace( <span class="string">'\\'</span>, <span class="string">'/'</span>, substr(<span class="variable">$_SERVER</span>[<span class="string">'SCRIPT_FILENAME'</span>], <span class="number">0</span>, <span class="number">0</span> - strlen(<span class="variable">$_SERVER</span>[<span class="string">'PHP_SELF'</span>])));
+}
+</code></pre>
+<ul>
+<li>javaBridge缺包问题,增加一个基友包就解决了</li>
+</ul>
+<pre><code class="java">java_autoload(<span class="string">"sugonrsa.jar;commons-codec-1.10.jar"</span>);
+</code></pre>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-团队协作中的Sublime" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
